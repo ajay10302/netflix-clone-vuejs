@@ -4,6 +4,7 @@
       class="container mx-auto flex flex-wrap py-5 px-3 flex-col md:flex-row items-center"
     >
       <a
+      href="/"
         class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
       >
         <img
@@ -37,7 +38,7 @@ export default {
   data() {
     return {
       links: [
-        { name: "Sign In", path: "/signin" },
+        { name: "Sign In", path: "/login" },
         
       ],
       Logo,
