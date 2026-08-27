@@ -1,12 +1,26 @@
 <template>
-  <div class="pt-60 relative z-2">
+  <section class="pt-60  bg-[url(./assets/images/banner.jpg)] bg-cover bg-center bg-no-repeat min-h-screen">
+    <Header/>
+    <div class="container mx-auto px-3 ">
 
-    <div class="mx-auto w-full max-w-[700px] text-center text-white flex flex-col items-center justify-center">
-      <h1 class="text-7xl font-bold text-white">Unlimited movies, <br> shows, and more</h1>
-      <p class="text-3xl mt-4 font-bold">Starts at ₹149. Cancel at any time.</p>
-
-      <p class="text-[20px] mt-4 ">Ready to watch? Enter your email to create or restart your membership.
-</p>
-    </div>
-  </div>
+      <div class="h-screen w-screen bg-black/50 absolute top-0 left-0 z-1"></div>
+         <Heroview />
+   
+      </div>
+  </section>
 </template>
+
+
+<script>
+import Header from '../../components/header/header.vue';
+import Heroview from './Components/Heroview.vue'
+
+export default {
+  components: {
+    Header,
+    Heroview,
+  },
+};
+
+
+</script>

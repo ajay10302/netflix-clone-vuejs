@@ -1,4 +1,7 @@
+
+
 <template>
+  <Header />
   <div class="pt-40 relative z-2">
     <form class=" mx-auto w-[500px]  bg-black/80 p-10 rounded-md gap-4">
       <h1 class="text-3xl font-bold text-white text-center mb-5">Login</h1>
@@ -17,8 +20,20 @@
           Login
         </button>
 
-        <p class="text-white text-center">Don't have any account ? <a href="/register" class="text-red-500 hover:text-red-600 font-bold tracking-normal font-body">Register Now</a></p>
+        <p class="text-white text-center">Don't have any account ? <router-link
+              to="/register" class="text-red-500 hover:text-red-600 font-bold tracking-normal font-body">Register Now</router-link></p>
       </div>
      </form>
   </div>
 </template>
+
+<script>
+import Header from '../../components/header/header.vue';
+
+export default {
+  components: {
+    Header,
+  },
+};
+
+</script>

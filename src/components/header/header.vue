@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gradient-to-b from-black to-transparent absolute top-0 left-0 w-full z-10">
+  <header class="bg-gradient-to-b from-black to-transparent absolute top-0 left-0 w-full z-10 border-b border-gray-500 ">
     <div
       class="container mx-auto flex flex-wrap py-5 px-3 flex-col md:flex-row items-center"
     >
@@ -17,14 +17,23 @@
         class="md:ml-auto flex flex-wrap items-center text-base justify-center"
       >
         <ul class="flex space-x-4">
-          <li v-for="(link, index) in links" :key="index">
+          <!-- <li v-for="(link, index) in links" :key="index">
             <router-link
               :to="link.path"
               class="mr-5 bg-red-500 text-white font-bold text-[20px] hover:bg-red-600 transition duration-300 py-2 px-4 rounded-md"
               s
               >{{ link.name }}</router-link
             >
+          </li> -->
+
+          
+          <li>
+            <router-link
+              to="/login"
+              class="bg-red-500 text-white font-bold text-[20px] hover:bg-red-600 transition duration-300 py-2 px-4 rounded-md"
+              >Sign In</router-link>
           </li>
+         
         </ul>
       </nav>
     
@@ -32,14 +41,14 @@
   </header>
 </template>
 
-<script>
+<script >
 import Logo from "../../assets/images/netflixlogo.png";
+
 export default {
   data() {
     return {
       links: [
         { name: "Sign In", path: "/login" },
-        
       ],
       Logo,
     };

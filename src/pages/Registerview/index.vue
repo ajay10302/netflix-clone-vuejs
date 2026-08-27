@@ -1,3 +1,5 @@
+
+
 <template>
   <div class="pt-40 relative z-2">
     <form class=" mx-auto w-[500px]  bg-black/80 p-10 rounded-md gap-4">
@@ -9,6 +11,7 @@
           class="border-1 border-gray-600 rounded-md p-4 text-white"
         />
         <input
+          v-model="email"
           type="text"
           placeholder="Email"
           class="border-1 border-gray-600 rounded-md p-4 text-white"
@@ -22,8 +25,20 @@
           Register
         </button>
 
-        <p class="text-white text-center">Already have an account ? <a href="/login" class="text-red-500 hover:text-red-600 font-bold tracking-normal font-body">Login</a></p>
+        <p class="text-white text-center">Already have an account ? <router-link
+              to="/login" class="text-red-500 hover:text-red-600 font-bold tracking-normal font-body">Login</router-link></p>
       </div>
      </form>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const email = ref<string>(
+  (route.query.email as string) || ''
+)
+</script>
