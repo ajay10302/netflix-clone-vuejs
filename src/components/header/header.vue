@@ -1,7 +1,7 @@
 <template>
   <header class="bg-gradient-to-b from-black to-transparent absolute top-0 left-0 w-full z-10 border-b border-gray-500 ">
     <div
-      class="container mx-auto flex flex-wrap py-5 px-3 flex-col md:flex-row items-center"
+      class="container w-full max-w-[1200px] mx-auto flex flex-wrap py-5 px-5 flex-col md:flex-row items-center"
     >
       <a
       href="/"
@@ -10,7 +10,7 @@
         <img
           :src="Logo"
           alt="Logo"
-          class="h-14 w-auto object-contain"
+          class="h-10 w-auto object-contain"
         />
       </a>
       <nav
@@ -30,7 +30,7 @@
           <li>
             <router-link
               to="/login"
-              class="bg-red-500 text-white font-bold text-[20px] hover:bg-red-600 transition duration-300 py-2 px-4 rounded-md"
+              class="bg-red-500 text-white font-semibold text-[16px] hover:bg-red-600 transition duration-300 py-2 px-3 rounded-md"
               >Sign In</router-link>
           </li>
          

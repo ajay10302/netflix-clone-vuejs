@@ -1,13 +1,9 @@
 <template>
   <div class="min-h-screen">
     <Header />
-    
-    <div class="">
-      
       <main class="bg-gradient-to-b from-red-900 to-black to-80% min-h-screen">
         <router-view />
       </main>
-    </div>
   </div>
 </template>
 
