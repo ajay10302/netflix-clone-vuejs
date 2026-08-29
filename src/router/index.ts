@@ -3,6 +3,7 @@ import Homeview from '../pages/Homeview/index.vue'
 import Loginview from '../pages/Loginview/index.vue'  
 import Registerview from '../pages/Registerview/index.vue'
 import Pagenotview from '../pages/Pagenotview/index.vue'
+import Browseview from '../pages/Browseview/index.vue'
 
 
 const routes = [
@@ -15,6 +16,17 @@ const routes = [
         description: 'Watch movies and TV shows online.',
       },
     },
+
+    {
+      path: '/browse',
+      name: 'browse',
+      component: Browseview,
+       meta: {
+        title: 'Netflix Clone - Home',
+        description: 'Watch movies and TV shows online.',
+      },
+    },
+
 
     {
       path: '/login',
