@@ -74,26 +74,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
 
-import { getTrendingMovies } from '../../../services/movieService'
 import type { Movie } from '../../../types/movies'
 
-const movie = ref<Movie | null>(null)
+
+defineProps<{
+  movie: Movie | null
+}>()
 
 const imageBaseUrl = 'https://image.tmdb.org/t/p/original'
 
-const fetchMovie = async () => {
-  try {
-    const movies = await getTrendingMovies()
-
-    movie.value = movies[0]
-  } catch (error) {
-    console.error('TMDB Error:', error)
-  }
-}
-
-onMounted(() => {
-  fetchMovie()
-})
 </script>
