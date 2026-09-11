@@ -4,6 +4,7 @@ import Loginview from '../pages/Loginview/index.vue'
 import Registerview from '../pages/Registerview/index.vue'
 import Pagenotview from '../pages/Pagenotview/index.vue'
 import Browseview from '../pages/Browseview/index.vue'
+import MovieDetailsView from '../pages/MovieDetailsView/index.vue'
 
 
 const routes = [
@@ -47,6 +48,16 @@ const routes = [
         description: 'Create your Netflix Clone account.',
       },
     },
+
+    {
+      path: '/movie/:id',
+      name: 'movie-details',
+      component: MovieDetailsView,
+      meta: {
+        title: 'Movie Details - Netflix Clone',
+        description: 'View details of the selected movie.',
+      },
+     },   
 
     {
       path: '/:pathMatch(.*)*',

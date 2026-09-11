@@ -31,3 +31,9 @@ export const getTopRatedMovies = async (): Promise<Movie[]> => {
 export const getUpcomingMovies = async (): Promise<Movie[]> => {
   return getMovies('/movie/upcoming')
 }
+
+export const getMovieDetails = async (movieId: number): Promise<Movie> => {
+  const response = await tmdbApi.get<Movie>(`/movie/${movieId}`)
+
+  return response.data
+}

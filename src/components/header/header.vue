@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gradient-to-b from-black to-transparent absolute top-0 left-0 w-full z-10 border-b border-gray-500 ">
+  <header class="bg-gradient-to-b from-black to-transparent absolute top-0 left-0 w-full z-20 border-b border-gray-500 ">
     <div
       class="container w-full max-w-[1200px] mx-auto flex flex-wrap py-5 px-5 flex-col md:flex-row items-center"
     >

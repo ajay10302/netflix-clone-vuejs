@@ -6,18 +6,26 @@
       backgroundImage: `url(${imageBaseUrl}${movie.backdrop_path})`,
     }"
   >
+    
     <!-- Dark overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+     
+
+    <div class="w-full h-20 bg-black absolute bottom-0 left-0 right-0 z-5 rounded-t-[100%] 
+    shadow-[0_-35px_35px_rgba(0,0,0,0.8)]"></div>
+
 
     <!-- Content -->
     <div
       class="container max-w-[1200px] mx-auto relative z-10 flex min-h-screen items-center px-5 pt-20"
     >
       <div class="max-w-2xl text-white">
-
+    
         <!-- Movie title -->
         <h1
-          class="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl"
+          class="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl 
+          inline-block animate-pulse bg-gradient-to-r from-red-500 via-red-200 via-red-600 to-red-300
+         bg-[length:200%_200%] bg-clip-text text-4xl font-bold text-transparent"
         >
           {{ movie.title }}
         </h1>

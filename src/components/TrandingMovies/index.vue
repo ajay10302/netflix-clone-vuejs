@@ -48,6 +48,7 @@
   <SwiperSlide
     v-for="movie in movies"
     :key="movie.id"
+    @click="openMovie(movie.id)"
   >
     <div
       class="group relative cursor-pointer overflow-hidden rounded-md transition duration-300 hover:scale-105"
@@ -104,7 +105,7 @@
 import type { Movie } from '../../types/movies'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Mousewheel } from 'swiper/modules'
-
+import { useRouter } from 'vue-router'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -114,7 +115,13 @@ defineProps<{
   movies: Movie[]
 }>()
 
+const router = useRouter()
+
 const imageBaseUrl = 'https://image.tmdb.org/t/p/w500'
+
+const openMovie = (movieId: number) => {
+  router.push(`/movie/${movieId}`)
+}
 </script>
 
 
