@@ -1,49 +1,43 @@
 <template>
-  <header class="text-gray-600 body-font bg-orange-700">
+ <footer class="bg-black pt-20 pb-8">
     <div
-      class="container mx-auto flex flex-wrap py-5 px-3 flex-col md:flex-row items-center"
+      class="container w-full max-w-[1200px] mx-auto "
     >
-      <a
+     <div class="px-5 ">
+
+       <a
+       href="/"
         class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
       >
         <img
           :src="Logo"
           alt="Logo"
-          class="bg-white rounded-md h-10 p-1 object-cover"
-        />
-      </a>
-      <nav
+          class="h-8 w-auto object-contain"
+          />
+        </a>
+      </div>
+
+
+
+       <div class="flex flex-wrap py-5 px-5 flex-col md:flex-row items-center">
+         <p class="text-white text-[14px] mt-4">© 2026 Ajay through Netflix ❤️. All rights reserved.</p>
+          <nav
         class="md:ml-auto flex flex-wrap items-center text-base justify-center"
       >
         <ul class="flex space-x-4">
           <li v-for="(link, index) in links" :key="index">
             <router-link
               :to="link.path"
-              class="mr-5 text-white hover:text-gray-900"
-              s
+              class="  text-white text-[14px] hover:text-red-600 transition duration-300"
               >{{ link.name }}</router-link
             >
           </li>
         </ul>
       </nav>
-      <button
-        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-      >
-        Button
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-4 h-4 ml-1"
-          viewBox="0 0 24 24"
-        >
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </button>
+      </div>
     </div>
-  </header>
+   
+  </footer>
 </template>
 
 <script>
@@ -52,9 +46,9 @@ export default {
   data() {
     return {
       links: [
-        { name: "Home", path: "/" },
-        { name: "About", path: "/about" },
-        { name: "Contact", path: "/contact" },
+        { name: "Terms of Service", path: "/terms" },
+        { name: "Privacy Policy", path: "/privacy" },
+        { name: "Contact Us", path: "/contact" },
       ],
       Logo,
     };

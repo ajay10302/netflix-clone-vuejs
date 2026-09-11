@@ -30,7 +30,21 @@
     }
   }"
   class="movie-slider"
->
+>  
+ <!-- Skeleton -->
+  <SwiperSlide
+    v-if="movies.length === 0"
+    v-for="n in 6"
+    :key="`skeleton-${n}`"
+  >
+    <div class="animate-pulse">
+      <!-- Poster -->
+      <div
+        class="h-[225px] w-full rounded-md bg-[#1D2128] md:h-[300px]"
+      ></div>
+    </div>
+  </SwiperSlide>
+  
   <SwiperSlide
     v-for="movie in movies"
     :key="movie.id"
@@ -90,6 +104,7 @@
 import type { Movie } from '../../types/movies'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Mousewheel } from 'swiper/modules'
+
 
 import 'swiper/css'
 import 'swiper/css/navigation'
