@@ -4,10 +4,10 @@
     
 
     <div class="">
-          <TrandingMovies title="Trending Movies" :movies="trendingMovies"/>
-          <PopularMovies title="Popular Movies" :movies="popularMovies"/>
-          <TopratedMovies title="Top Rated Movies" :movies="topRatedMovies"/>
-          <UpcomingMovies title="Upcoming Movies" :movies="upcomingMovies"/>
+          <TrandingMovies title="Trending Movies 🔥" :movies="trendingMovies"/>
+          <PopularMovies title="Popular Movies 🎦" :movies="popularMovies"/>
+          <TopratedMovies title="Top Rated Movies ⭐" :movies="topRatedMovies"/>
+          <UpcomingMovies title="Upcoming Movies 🕒" :movies="upcomingMovies"/>
     </div>
 
     

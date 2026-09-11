@@ -7,7 +7,7 @@
     }"
   >
     <!-- Dark overlay -->
-    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
 
     <!-- Content -->
     <div

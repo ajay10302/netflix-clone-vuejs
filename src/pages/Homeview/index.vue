@@ -1,6 +1,6 @@
 <template>
          <Heroview />
-         <Enjoyview/>
+         <!-- <Enjoyview/> -->
 </template>
 
 
