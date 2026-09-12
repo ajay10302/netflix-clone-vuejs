@@ -9,3 +9,20 @@ export interface Movie {
   vote_count: number
   popularity: number
 }
+
+export interface MovieDetails extends Movie {
+  tagline: string | null
+  runtime: number | null
+  genres: {
+    id: number
+    name: string
+  }[]
+}
+
+
+export interface CastMember {
+  id: number
+  name: string
+  character: string
+  profile_path: string | null
+}

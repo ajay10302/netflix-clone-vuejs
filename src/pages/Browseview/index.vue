@@ -1,6 +1,6 @@
 <template>
 
-    <Browsebanner :movie="movie"/>
+    <Browsebanner :movies="trendingMovies"/>
     
 
     <div class="">
@@ -29,21 +29,21 @@ import { onMounted, ref } from 'vue'
 import { getTrendingMovies, getPopularMovies, getTopRatedMovies, getUpcomingMovies } from '../../services/movieService'
 import type { Movie } from '../../types/movies'
 
-const movie = ref<Movie | null>(null)
+// const movie = ref<Movie | null>(null)
 const trendingMovies = ref<Movie[]>([])
 const popularMovies = ref<Movie[]>([])
 const topRatedMovies = ref<Movie[]>([])
 const upcomingMovies = ref<Movie[]>([])
 // banner movie
-const fetchMovie = async () => {
-  try {
-    const movies = await getTrendingMovies()
+// const fetchMovie = async () => {
+//   try {
+//     const movies = await getTrendingMovies()
 
-    movie.value = movies[0]
-  } catch (error) {
-    console.error('TMDB Error:', error)
-  }
-}
+//     movie.value = movies[Math.floor(Math.random() * movies.length)]
+//   } catch (error) {
+//     console.error('TMDB Error:', error)
+//   }
+// }
 
 
 const fetchMovies = async () => {
@@ -62,7 +62,7 @@ const fetchMovies = async () => {
 
 
 onMounted(() => {
-  fetchMovie()
+  // fetchMovie()
   fetchMovies()
 })
 
